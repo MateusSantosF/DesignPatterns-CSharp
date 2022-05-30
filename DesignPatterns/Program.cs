@@ -4,35 +4,36 @@ using DesignPatterns.Creational.AbstractFactory;
 using DesignPatterns.Creational.AbstractFactory.interfaces;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
+using DesignPatterns.Creational.Builder;
+
 
 namespace Program
 {
 
     public class Program
     {
-        public static void Main(String[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("======== Singleton =======");
             var singleton = Singleton.getInstance();
             singleton.bussinesLogic();
-            Console.WriteLine("========END OF Singleton =======");
-
+   
             Console.WriteLine("\n======== PROTOTYPE =======");
             var prop = new Prototype() { Age = 20, Name = "Mateus", children = new ChildrenPrototype() { Id = 2 } };
-            Console.WriteLine(prop.children.Id);
-            Console.WriteLine("===============");
+            Console.WriteLine("Initial ID = " + prop.children.Id);
+   
             var copy = (Prototype) prop.ShallowClone();
             copy.Name = "Joao";
-            Console.WriteLine(prop.Name);
-            Console.WriteLine(copy.Name);
-            Console.WriteLine("===============");
+            Console.WriteLine("Original name =" +prop.Name);
+            Console.WriteLine("Shallow Copy Name =" + copy.Name);
+
             var anotherCopy = (Prototype) prop.DeepClone();
             anotherCopy.children.Id = 20;
 
-            Console.WriteLine(prop.children.Id);
-            Console.WriteLine(anotherCopy.children.Id);
+            Console.WriteLine("Original Id =" + prop.children.Id);
+            Console.WriteLine("Deep Copy ID =" + anotherCopy.children.Id);
 
-            Console.WriteLine("========         FACTORY        =======");
+            Console.WriteLine("\n========         FACTORY        =======");
 
             var optionFactory = 1;
             IAbstractFactory factory = null;
@@ -54,6 +55,16 @@ namespace Program
             Console.WriteLine(table.ToString() + " Table");
             Console.WriteLine(sofa.ToString() + " Sofa");
 
+            Console.WriteLine("\n========         BUILDER        =======");
+
+            Director director = new Director();
+
+            SportBuilder builder = new SportBuilder();
+            director.makeSportCar(builder);
+
+            var car = builder.getResult();
+
+            Console.WriteLine("Car built = " + car.GetType());
 
         }
     }
