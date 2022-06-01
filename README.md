@@ -4,7 +4,7 @@
 - [x] Abstract Factory <br>
 - [x] Singleton <br>
 - [x] Prototype <br>
-- [ ] Builder <br>
+- [x] Builder <br>
 - [ ] Factory Method <br>
 <h3> Behavioural </h3>
 
