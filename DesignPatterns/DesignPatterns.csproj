@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="structural\" />
-    <Folder Include="behavioural\" />
+    <Folder Include="Behavioural\" />
   </ItemGroup>
 
 </Project>

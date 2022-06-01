@@ -5,7 +5,7 @@ using DesignPatterns.Creational.AbstractFactory.interfaces;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
 using DesignPatterns.Creational.Builder;
-
+using DesignPatterns.Structural.Facade;
 
 namespace Program
 {
@@ -66,6 +66,9 @@ namespace Program
 
             Console.WriteLine("Car built = " + car.GetType());
 
+            Console.WriteLine("\n========         FACADE        =======");
+            VideoConverterFacade converter = new VideoConverterFacade();
+            string mp4Video = converter.Convert("youtubevideo.ogg", "mp4");
         }
     }
 }
