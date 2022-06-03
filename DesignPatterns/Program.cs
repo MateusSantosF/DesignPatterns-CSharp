@@ -2,13 +2,14 @@
 
 using DesignPatterns.Creational.AbstractFactory;
 using DesignPatterns.Creational.AbstractFactory.interfaces;
+using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
-using DesignPatterns.Creational.Builder;
-using DesignPatterns.Structural.Facade;
-using DesignPatterns.Structural.Composite.model;
 using DesignPatterns.Structural.Composite;
+using DesignPatterns.Structural.Composite.model;
 using DesignPatterns.Structural.Decorator;
+using DesignPatterns.Structural.Decorator.model;
+using DesignPatterns.Structural.Facade;
 
 namespace Program
 {
