@@ -3,18 +3,26 @@ using DesignPatterns.Structural.Composite.model;
 
 namespace DesignPatterns.Structural.Composite
 {
+
+    /// <summary>
+    /// Permite acoplar comportamentos para objetos ao coloca-lós dentro de wrappers que possuem outros comportamentos.<para />
+    /// Quando Utilizar: <para />Utilize o padrão Decorator quando você precisa ser capaz de projetar comportamentos
+    /// adicionais para objetos em tempo de execução sem quebrar o código que usa esses objetos;
+    /// <para />Utilize o padrão quando é complicado ou impossível estender o comportamento de um objeto usando herança.
+    /// </summary>
     public class EncryptionDecorator : DataSourceDecorator
     {
-        public EncryptionDecorator(IDataSource dataSource) : base(dataSource)
+        public EncryptionDecorator(DataSource dataSource) : base(dataSource)
         {
         }
 
-        public new string ReadData()
+        public override string ReadData()
         {
+            Console.WriteLine("Decrypting...");
             return Decode(base.ReadData());
         }
 
-        public new void WriteData(string data)
+        public override void WriteData(string data)
         {
 
             Console.WriteLine("Encrypting...");

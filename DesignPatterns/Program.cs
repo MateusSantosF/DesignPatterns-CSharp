@@ -8,6 +8,7 @@ using DesignPatterns.Creational.Builder;
 using DesignPatterns.Structural.Facade;
 using DesignPatterns.Structural.Composite.model;
 using DesignPatterns.Structural.Composite;
+using DesignPatterns.Structural.Decorator;
 
 namespace Program
 {
@@ -73,20 +74,24 @@ namespace Program
             string mp4Video = converter.Convert("youtubevideo.ogg", "mp4");
 
             Console.WriteLine("\n========         DECORATOR        =======");
-            var source = new FileDataSource();
 
-            source.WriteData("Some thing");
+            var encrypt = true;
+            var compress = true;
+            var source = new DataSourceDecorator(new FileDataSource());
+
+            if (encrypt)
+            {
+                source = new EncryptionDecorator(source);
+            }
+            if (compress)
+            {
+                source = new CompressionDecorator(source);
+            }
+
+            source.WriteData("Anything");
             Console.WriteLine(source.ReadData());
 
-            Console.WriteLine("Using decorator...");
-            var source2 = new EncryptionDecorator(source);
-            source2.WriteData("Some thing");
-            Console.WriteLine(source2.ReadData());
-
-            Console.WriteLine("Using decorator 2...");
-            var source3 = new EncryptionDecorator(source2);
-            source3.WriteData("Some thing");
-            Console.WriteLine(source3.ReadData());
+           
 
         }
     }

@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Structural.Composite.model
 {
-    public class DataSourceDecorator : IDataSource
+    public class DataSourceDecorator : DataSource
     {
-        private IDataSource wrappee; 
-        public DataSourceDecorator(IDataSource dataSource)
+        private DataSource wrappee; 
+        public DataSourceDecorator(DataSource dataSource)
         {
             wrappee = dataSource;
         }
-        public string ReadData()
+        public override string ReadData()
         {
             return wrappee.ReadData();
         }
 
-        public void WriteData(string data)
+        public override void WriteData(string data)
         {
             wrappee.WriteData(data);
         }

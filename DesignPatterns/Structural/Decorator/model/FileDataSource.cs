@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Structural.Composite.model
 {
-    public class FileDataSource : IDataSource
+    public class FileDataSource : DataSource
     {
         string FileName;
 
 
-        public string ReadData()
+        public override string ReadData()
         {
             return FileName;
         }
 
-        public void WriteData(string data)
+        public override void WriteData(string data)
         {
            FileName = data;
         }
