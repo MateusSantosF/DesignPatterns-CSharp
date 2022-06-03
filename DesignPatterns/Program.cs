@@ -6,6 +6,8 @@ using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
 using DesignPatterns.Creational.Builder;
 using DesignPatterns.Structural.Facade;
+using DesignPatterns.Structural.Composite.model;
+using DesignPatterns.Structural.Composite;
 
 namespace Program
 {
@@ -36,7 +38,7 @@ namespace Program
             Console.WriteLine("\n========         FACTORY        =======");
 
             var optionFactory = 1;
-            IAbstractFactory factory = null;
+            IAbstractFactory? factory = null;
 
             if (optionFactory == 0)
             {
@@ -69,6 +71,23 @@ namespace Program
             Console.WriteLine("\n========         FACADE        =======");
             VideoConverterFacade converter = new VideoConverterFacade();
             string mp4Video = converter.Convert("youtubevideo.ogg", "mp4");
+
+            Console.WriteLine("\n========         DECORATOR        =======");
+            var source = new FileDataSource();
+
+            source.WriteData("Some thing");
+            Console.WriteLine(source.ReadData());
+
+            Console.WriteLine("Using decorator...");
+            var source2 = new EncryptionDecorator(source);
+            source2.WriteData("Some thing");
+            Console.WriteLine(source2.ReadData());
+
+            Console.WriteLine("Using decorator 2...");
+            var source3 = new EncryptionDecorator(source2);
+            source3.WriteData("Some thing");
+            Console.WriteLine(source3.ReadData());
+
         }
     }
 }
