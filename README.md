@@ -1,6 +1,7 @@
 # Design Patterns With C#
 
 <h3> Creational </h3>
+- [x] SimpleFactory <br>
 - [x] Abstract Factory <br>
 - [x] Singleton <br>
 - [x] Prototype <br>
@@ -10,6 +11,8 @@
 
 <h3> Structural </h3>
 - [x] Facade <br>
+- [x] Composite <br>
+- [ ] Flyweight <br>
 <br>
 <br>
 <div align="center">Developed with ❤️ by MateusSantosF</div>
