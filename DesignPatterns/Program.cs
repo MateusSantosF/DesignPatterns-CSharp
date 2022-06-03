@@ -78,11 +78,12 @@ namespace Program
 
             var encrypt = true;
             var compress = true;
-            var source = new DataSourceDecorator(new FileDataSource());
+            var simple = new FileDataSource();
+            DataSourceDecorator source = null;
 
             if (encrypt)
             {
-                source = new EncryptionDecorator(source);
+                source = new EncryptionDecorator(simple);
             }
             if (compress)
             {

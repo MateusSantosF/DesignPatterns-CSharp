@@ -2,9 +2,9 @@
 
 namespace DesignPatterns.Structural.Decorator.model
 {
-    public class DataSourceDecorator : DataSource
+    public abstract class DataSourceDecorator : DataSource
     {
-        private DataSource wrappee; 
+        protected DataSource wrappee; 
         public DataSourceDecorator(DataSource dataSource)
         {
             wrappee = dataSource;
