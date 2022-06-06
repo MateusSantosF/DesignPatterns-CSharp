@@ -13,7 +13,7 @@
 - [x] Facade <br>
 - [x] Decorator <br>
 - [ ] Composite <br>
-- [ ] Flyweight <br>
+- [x] Flyweight <br>
 <br>
 <br>
 <div align="center">Developed with ❤️ by MateusSantosF</div>
