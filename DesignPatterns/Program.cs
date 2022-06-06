@@ -10,6 +10,8 @@ using DesignPatterns.Structural.Composite.model;
 using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Structural.Decorator.model;
 using DesignPatterns.Structural.Facade;
+using DesignPatterns.Structural.Flyweight.model;
+using DesignPatterns.Structural.Flyweight.TreeFactory;
 
 namespace Program
 {
@@ -79,7 +81,7 @@ namespace Program
             var encrypt = true;
             var compress = true;
             var simple = new FileDataSource();
-            DataSourceDecorator source = null;
+            DataSourceDecorator? source = null;
 
             if (encrypt)
             {
@@ -87,13 +89,39 @@ namespace Program
             }
             if (compress)
             {
-                source = new CompressionDecorator(source);
+                if(source != null)
+                {
+                    source = new CompressionDecorator(source);
+                } 
+                else
+                {
+                    source = new CompressionDecorator(simple);
+                }                 
             }
 
             source.WriteData("Anything");
             Console.WriteLine(source.ReadData());
 
-           
+            Console.WriteLine("\n========         FLYWEIGHT        =======");
+
+            Florest florest = new Florest();
+
+            for(int i = 0; i < 25; i++)
+            {
+                if( i % 2 == 0) {
+                    florest.PlantTree(i, i, "OAK", "red", "textureOAK.png");
+                }
+                else
+                {
+                    florest.PlantTree(i, i, "Autumn", "blue", "textureAutumn.png");
+                }
+            }
+
+            florest.Trees.ForEach(tree =>
+            {
+                Console.WriteLine(tree.Type.ToString());
+            });
+
 
         }
     }
