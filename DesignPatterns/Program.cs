@@ -12,6 +12,7 @@ using DesignPatterns.Structural.Decorator.model;
 using DesignPatterns.Structural.Facade;
 using DesignPatterns.Structural.Flyweight.model;
 using DesignPatterns.Structural.Flyweight.TreeFactory;
+using System.Drawing;
 
 namespace Program
 {
@@ -121,6 +122,28 @@ namespace Program
             {
                 Console.WriteLine(tree.Type.ToString());
             });
+
+            Console.WriteLine("\n========         COMPOSITE        =======");
+
+            var pen = new Product("Pen", 2.5f);
+            var smartphone = new Product("Smartphone", 2500.00f);
+            var tablet = new Product("Tablet", 1000f);
+
+            var produtBox = new Box();
+            produtBox.AddItem(pen);
+            produtBox.AddItem(smartphone);
+            produtBox.AddItem(tablet);
+
+            var shirt = new Product("Shirt", 30.00f);
+            var pants = new Product("Pants", 10f);
+
+            var anotherProductBox = new Box();
+            anotherProductBox.AddItem(shirt);
+            anotherProductBox.AddItem(pants);
+
+            produtBox.AddItem(anotherProductBox);
+
+            Console.WriteLine($"Sale total price:{produtBox.GetPrice()}");
 
 
         }
