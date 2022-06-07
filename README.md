@@ -12,7 +12,7 @@
 <h3> Structural </h3>
 - [x] Facade <br>
 - [x] Decorator <br>
-- [ ] Composite <br>
+- [x] Composite <br>
 - [x] Flyweight <br>
 <br>
 <br>
