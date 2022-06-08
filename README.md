@@ -14,6 +14,9 @@
 - [x] Decorator <br>
 - [x] Composite <br>
 - [x] Flyweight <br>
+- [] Proxy <br>
+- [] Bridge <br>
+- [] Adapter <br>
 <br>
 <br>
 <div align="center">Developed with ❤️ by MateusSantosF</div>
