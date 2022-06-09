@@ -1,18 +1,9 @@
-﻿using DesignPatterns.Structural.Facade.model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DesignPatterns.Structural.Facade.interfaces;
+﻿using DesignPatterns.Structural.Facade.interfaces;
+using DesignPatterns.Structural.Facade.model;
 
 namespace DesignPatterns.Structural.Facade
 {
-    /// <summary>
-    ///  O padrão Facade, cria uma interface facilitadora para o cliente acessar um subprograma mais complexo,
-    ///  reduzindo acomplamento e a necessidade de se conhecer todas as subclasses e construtores do subprograma complexo
-    /// </summary>
-    /// <returns></returns>
+
     public class VideoConverterFacade
     {
       

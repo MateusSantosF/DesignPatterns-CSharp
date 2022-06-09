@@ -5,11 +5,7 @@ using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Structural.Decorator.model;
 using DesignPatterns.Structural.Facade;
 using DesignPatterns.Structural.Flyweight.model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Program.factorys
 {

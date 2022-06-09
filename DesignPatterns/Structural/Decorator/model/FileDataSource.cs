@@ -1,5 +1,4 @@
-﻿
-using DesignPatterns.Structural.Decorator.model;
+﻿using DesignPatterns.Structural.Decorator.model;
 
 namespace DesignPatterns.Structural.Composite.model
 {

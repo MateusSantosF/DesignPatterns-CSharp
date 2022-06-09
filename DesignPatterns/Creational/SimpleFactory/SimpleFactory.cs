@@ -1,5 +1,4 @@
-﻿
-using DesignPatterns.Creational.SimpleFactory.model;
+﻿using DesignPatterns.Creational.SimpleFactory.model;
 
 namespace DesignPatterns.Creational.SimpleFactory
 {
