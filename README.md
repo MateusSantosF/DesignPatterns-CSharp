@@ -12,8 +12,11 @@
 <h3> Structural </h3>
 - [x] Facade <br>
 - [x] Decorator <br>
-- [ ] Composite <br>
+- [x] Composite <br>
 - [x] Flyweight <br>
+- [] Proxy <br>
+- [] Bridge <br>
+- [] Adapter <br>
 <br>
 <br>
 <div align="center">Developed with ❤️ by MateusSantosF</div>
