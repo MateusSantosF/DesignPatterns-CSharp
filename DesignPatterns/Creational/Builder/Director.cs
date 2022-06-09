@@ -9,13 +9,7 @@ namespace DesignPatterns.Creational.Builder
 {
     internal class Director
     {
-
-    
-
         public Director() { }
-
-
-
         public void makeManualCar(IBuilder builder)
         {
             builder.setSeats(4);
