@@ -73,5 +73,15 @@ namespace DesignPatterns.Program
         {
             return _patterns["Structural"].Show(Constants.FLYWEIGHT);
         }
+
+        public string Proxy()
+        {
+            return _patterns["Structural"].Show(Constants.PROXY);
+        }
+
+        public string Adapter()
+        {
+            return _patterns["Structural"].Show(Constants.ADAPTER);
+        }
     }
 }

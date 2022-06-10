@@ -13,5 +13,7 @@
         public const string DECORATOR = "Decorator";
         public const string FACADE = "Facade";
         public const string FLYWEIGHT = "Flyweight";
+        public const string PROXY = "Proxy";
+        public const string ADAPTER = "Adapter";
     }
 }
