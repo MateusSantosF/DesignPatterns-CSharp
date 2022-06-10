@@ -1,4 +1,6 @@
 ﻿using DesignPatterns.Program;
+using DesignPatterns.Structural.Adapter.interfaces;
+using DesignPatterns.Structural.Adapter.model;
 using DesignPatterns.Structural.Proxy;
 using DesignPatterns.Structural.Proxy.model;
 
@@ -26,6 +28,13 @@ namespace Program
             manager.WathVideo(1);
             manager.WathVideo(2);
             Console.WriteLine("Total video views in youtube: " + proxy.Counter);
+
+
+            Console.WriteLine("ADAPTER client ===========");
+
+            IService myService = new ServiceAdapter(new LegacyService());
+            myService.DoAnythingCurrent();
+
         }
     }
 }
