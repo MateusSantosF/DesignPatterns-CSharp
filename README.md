@@ -15,7 +15,7 @@
 - [x] Composite <br>
 - [x] Flyweight <br>
 - [x] Proxy <br>
-- [] Bridge <br>
+- [x] Bridge <br>
 - [x] Adapter <br>
 <br>
 <br>
