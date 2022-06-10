@@ -35,7 +35,7 @@ namespace DesignPatterns.Structural.Proxy
             this.service = service;
         }
 
-        public Video WathVideo(int id)
+        public Video? WathVideo(int id)
         {
            return service.GetVideoById(id);
         }
