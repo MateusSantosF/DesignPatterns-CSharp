@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.Program.factorys.interfaces;
 using DesignPatterns.Structural.Adapter.interfaces;
 using DesignPatterns.Structural.Adapter.model;
+using DesignPatterns.Structural.Bridge.model;
 using DesignPatterns.Structural.Composite;
 using DesignPatterns.Structural.Composite.model;
 using DesignPatterns.Structural.Decorator;
@@ -115,6 +116,12 @@ namespace DesignPatterns.Program.factorys
                     myService.DoAnythingCurrent();
 
                     return string.Empty;
+                case Constants.BRIGDE:
+                    Remote controll = new Remote(new Radio());
+                    controll.VolumeUp();
+                    controll.ChannelUp();
+                    controll.ChannelUp();
+                   return controll.ToString();
                 default:
                     return string.Empty;
 

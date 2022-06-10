@@ -15,5 +15,8 @@
         public const string FLYWEIGHT = "Flyweight";
         public const string PROXY = "Proxy";
         public const string ADAPTER = "Adapter";
+        public const string BRIGDE = "Bridge";
+
+
     }
 }

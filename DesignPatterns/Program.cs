@@ -1,34 +1,31 @@
 ﻿using DesignPatterns.Program;
+using DesignPatterns.Structural.Bridge.model;
 
 namespace Program
 {
     public class Program
     {
-        /// <summary>
-        /// Explore design patterns using Builder below!
-        /// 
-        /// Creational Patterns
-        ///     - [x] SimpleFactory
-        ///     - [x] Abstract Factory
-        ///     - [x] Singleton
-        ///     - [x] Prototype
-        ///     - [x] Builder
-        /// Structural Patterns
-        ///     - [x] Facade<br>
-        ///     - [x] Decorator<br>
-        ///     - [x] Composite<br>
-        ///     - [x] Flyweight<br>
-        ///     - [x] Proxy<br>
-        ///     - [x] Bridge<br>
-        ///     - [x] Adapter<br>
-        /// </summary>
+        /*Explore design patterns using Builder below!
+         
+          Creational Patterns
+             - [x] SimpleFactory
+             - [x]Abstract Factory
+             - [x] Singleton
+             - [x] Prototype
+             - [x] Builder
+         Structural Patterns
+             - [x] Facade
+             - [x] Decorator
+             - [x] Composite
+             - [x] Flyweight
+             - [x] Proxy
+             - [x] Bridge
+             - [x] Adapter         
+        */
         public static void Main(string[] args)
         {
-            
-            string pattern = DesignPattern.ChoosePattern().StructuralPatterns().Proxy();
+            string pattern = DesignPattern.ChoosePattern().StructuralPatterns().Bridge();
             Console.WriteLine(pattern);
-  
-
         }
     }
 }

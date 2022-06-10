@@ -1,7 +1,6 @@
 ﻿using DesignPatterns.Program.factorys;
 using DesignPatterns.Program.factorys.interfaces;
 using DesignPatterns.Program.interfaces;
-using DesignPatterns.Program.interfaces.creational;
 
 namespace DesignPatterns.Program
 {
@@ -82,6 +81,11 @@ namespace DesignPatterns.Program
         public string Adapter()
         {
             return _patterns["Structural"].Show(Constants.ADAPTER);
+        }
+
+        public string Bridge()
+        {
+            return _patterns["Structural"].Show(Constants.BRIGDE);
         }
     }
 }

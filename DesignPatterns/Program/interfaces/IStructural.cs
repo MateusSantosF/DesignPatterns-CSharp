@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Program.interfaces.creational
+﻿namespace DesignPatterns.Program.interfaces
 {
     public interface IStructural
     {
@@ -65,5 +65,9 @@
         /// utilizar criando uma classe Adapter{seuServiço} que implementa a interface existente, mas usa o serviço incompativel.
         /// </summary>
         string Adapter();
+
+
+
+        string Bridge();
     }
 }
