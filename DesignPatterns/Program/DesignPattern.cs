@@ -108,5 +108,10 @@ namespace DesignPatterns.Program
         {
             return _patterns["Behavioral"].Show(Constants.OBSERVER);
         }
+
+        public string Strategy()
+        {
+            return _patterns["Behavioral"].Show(Constants.STRATEGY);
+        }
     }
 }

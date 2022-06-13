@@ -1,8 +1,5 @@
-﻿
-using DesignPatterns.Behavioural.CommandPattern;
-using DesignPatterns.Behavioural.CommandPattern.model;
-using DesignPatterns.Behavioural.Memento;
-using DesignPatterns.Behavioural.Observer.model;
+﻿using DesignPatterns.Behavioural.Strategy;
+using DesignPatterns.Behavioural.Strategy.model;
 using DesignPatterns.Program;
 
 namespace Program
@@ -17,6 +14,10 @@ namespace Program
              - [x] Singleton
              - [x] Prototype
              - [x] Builder
+          Behavioral Patterns
+             - [x] Observer
+             - [x] Memento
+             - [x] Command
          Structural Patterns
              - [x] Facade
              - [x] Decorator
@@ -29,9 +30,10 @@ namespace Program
         public static void Main(string[] args)
         {
             string pattern = DesignPattern.ChoosePattern()
-                                          .BehavioralPatterns() 
-                                          .Memento(); 
+                                          .BehavioralPatterns()
+                                          .Strategy();
             Console.WriteLine(pattern);
+
 
         }
     }

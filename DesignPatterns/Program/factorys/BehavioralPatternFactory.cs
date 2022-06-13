@@ -2,6 +2,8 @@
 using DesignPatterns.Behavioural.CommandPattern.model;
 using DesignPatterns.Behavioural.Memento;
 using DesignPatterns.Behavioural.Observer.model;
+using DesignPatterns.Behavioural.Strategy;
+using DesignPatterns.Behavioural.Strategy.model;
 using DesignPatterns.Program.factorys.interfaces;
 
 
@@ -60,6 +62,15 @@ namespace DesignPatterns.Program.factorys
                     caretakeOne.ShowHistory();
                     caretakeOne.Undo();
                     originatorOne.ShowState();
+
+                    return string.Empty;
+
+                case Constants.STRATEGY:
+
+                    Context context = new Context();
+                    context.SetStrategy(new SumStrategy());
+                    context.SetStrategy(new SubtractStrategy());
+                    context.DoSomething(2, 2);
 
                     return string.Empty;
 

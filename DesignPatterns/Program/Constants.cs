@@ -20,6 +20,7 @@
         public const string COMMAND = "Command";
         public const string MEMENTO = "Memento";
         public const string OBSERVER = "Observer";
+        public const string STRATEGY = "Strategy";
 
 
     }
