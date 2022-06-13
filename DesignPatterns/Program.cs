@@ -1,6 +1,7 @@
 ﻿
 using DesignPatterns.Behavioural.CommandPattern;
 using DesignPatterns.Behavioural.CommandPattern.model;
+using DesignPatterns.Behavioural.Memento;
 using DesignPatterns.Behavioural.Observer.model;
 using DesignPatterns.Program;
 
@@ -48,19 +49,38 @@ namespace Program
             //subject.ChangeState(4);
 
 
-            Editor editor = new Editor();
-            Button copyButton = new Button(new CopyCommand( editor));
-            Button pasteButton = new Button(new PasteCommand( editor));
+            //Editor editor = new Editor();
+            //Button copyButton = new Button(new CopyCommand( editor));
+            //Button pasteButton = new Button(new PasteCommand( editor));
 
-            editor.CurrentText = "Hello";
-            editor.SelectedText = "World!";
+            //editor.CurrentText = "Hello";
+            //editor.SelectedText = "World!";
 
 
-            copyButton.Click();
-            pasteButton.Click();
-            Console.WriteLine(editor.CurrentText);
-            editor.UndoChanges();
-            Console.WriteLine(editor.CurrentText);
+            //copyButton.Click();
+            //pasteButton.Click();
+            //Console.WriteLine(editor.CurrentText);
+            //editor.UndoChanges();
+            //Console.WriteLine(editor.CurrentText);
+
+
+
+
+
+            Originator originatorOne = new Originator("0.0", "One");
+            Caretake caretakeOne = new Caretake(originatorOne);
+            caretakeOne.Backup();
+            originatorOne.DoSomething(); //alter state
+            originatorOne.ShowState();
+            caretakeOne.Backup();
+            originatorOne.DoSomething(); //alter state
+            originatorOne.ShowState();
+
+
+            caretakeOne.ShowHistory();
+            caretakeOne.Undo();
+            originatorOne.ShowState();
+
 
         }
     }
