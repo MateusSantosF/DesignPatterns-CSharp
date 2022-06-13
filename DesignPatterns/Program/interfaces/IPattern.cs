@@ -5,5 +5,7 @@
         ICreational CreationalPatterns();
 
         IStructural StructuralPatterns();
+
+        IBehavioral BehavioralPatterns();
     }
 }

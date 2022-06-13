@@ -4,7 +4,7 @@ using DesignPatterns.Program.interfaces;
 
 namespace DesignPatterns.Program
 {
-    public class DesignPattern : IPattern, ICreational, IStructural
+    public class DesignPattern : IPattern, ICreational, IStructural, IBehavioral
     {
         private static Dictionary<string,IFactory> _patterns = new Dictionary<string, IFactory>();
 
@@ -12,6 +12,7 @@ namespace DesignPatterns.Program
 
             _patterns.Add("Creational", new CreationalPatternFactory());
             _patterns.Add("Structural", new StructuralPatternFactory());
+            _patterns.Add("Behavioral", new BehavioralPatternFactory());
         }
 
         public static IPattern ChoosePattern()
@@ -86,6 +87,26 @@ namespace DesignPatterns.Program
         public string Bridge()
         {
             return _patterns["Structural"].Show(Constants.BRIGDE);
+        }
+
+        public IBehavioral BehavioralPatterns()
+        {
+           return this;
+        }
+
+        public string Command()
+        {
+            return _patterns["Behavioral"].Show(Constants.COMMAND);
+        }
+
+        public string Memento()
+        {
+            return _patterns["Behavioral"].Show(Constants.MEMENTO);
+        }
+
+        public string Observer()
+        {
+            return _patterns["Behavioral"].Show(Constants.OBSERVER);
         }
     }
 }

@@ -17,6 +17,10 @@
         public const string ADAPTER = "Adapter";
         public const string BRIGDE = "Bridge";
 
+        public const string COMMAND = "Command";
+        public const string MEMENTO = "Memento";
+        public const string OBSERVER = "Observer";
+
 
     }
 }
