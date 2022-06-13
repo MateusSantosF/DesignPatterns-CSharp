@@ -8,6 +8,9 @@
 - [x] Builder <br>
 
 <h3> Behavioural </h3>
+- [x] Observer <br>
+- [x] Memento <br>
+- [x] Command <br>
 
 <h3> Structural </h3>
 - [x] Facade <br>
