@@ -1,4 +1,7 @@
-﻿using DesignPatterns.Behavioural.Observer.model;
+﻿
+using DesignPatterns.Behavioural.CommandPattern;
+using DesignPatterns.Behavioural.CommandPattern.model;
+using DesignPatterns.Behavioural.Observer.model;
 using DesignPatterns.Program;
 
 namespace Program
@@ -30,19 +33,35 @@ namespace Program
             Console.WriteLine(pattern);
 
 
-            Subject subject = new Subject();
+            //Subject subject = new Subject();
 
-            ConcreteObserverA observerA = new ConcreteObserverA("Observer A");
-            ConcreteObserverA observerA2 = new ConcreteObserverA("Observer A2");
+            //ConcreteObserverA observerA = new ConcreteObserverA("Observer A");
+            //ConcreteObserverA observerA2 = new ConcreteObserverA("Observer A2");
 
-            ConcreteObserverB observerB = new ConcreteObserverB("Observer B");
+            //ConcreteObserverB observerB = new ConcreteObserverB("Observer B");
 
-            subject.Attach(observerA);
-            subject.Attach(observerA2);
-            subject.Attach(observerB);
+            //subject.Attach(observerA);
+            //subject.Attach(observerA2);
+            //subject.Attach(observerB);
 
-            subject.ChangeState(2);
-            subject.ChangeState(4);
+            //subject.ChangeState(2);
+            //subject.ChangeState(4);
+
+
+            Editor editor = new Editor();
+            Button copyButton = new Button(new CopyCommand( editor));
+            Button pasteButton = new Button(new PasteCommand( editor));
+
+            editor.CurrentText = "Hello";
+            editor.SelectedText = "World!";
+
+
+            copyButton.Click();
+            pasteButton.Click();
+            Console.WriteLine(editor.CurrentText);
+            editor.UndoChanges();
+            Console.WriteLine(editor.CurrentText);
+
         }
     }
 }
