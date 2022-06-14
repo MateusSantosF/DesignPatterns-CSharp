@@ -11,6 +11,7 @@
 - [x] Observer <br>
 - [x] Memento <br>
 - [x] Command <br>
+- [x] Strategy <br>
 
 <h3> Structural </h3>
 - [x] Facade <br>
