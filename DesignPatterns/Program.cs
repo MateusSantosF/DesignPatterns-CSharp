@@ -1,5 +1,7 @@
 ﻿using DesignPatterns.Behavioural.Iterator.interfaces;
 using DesignPatterns.Behavioural.Iterator.model;
+using DesignPatterns.Behavioural.Visitor;
+using DesignPatterns.Behavioural.Visitor.model;
 using DesignPatterns.Program;
 
 namespace Program
@@ -48,6 +50,11 @@ namespace Program
             MyIterator iterator = collection.GetIterator();
 
             collection.MyFor(iterator);
+
+            Dot dot = new Dot(2, 2);
+            Square square = new Square(3, 3);
+            ConcreteVisitor v = new ConcreteVisitor();
+            square.Accept(v);
         }
     }
 }
