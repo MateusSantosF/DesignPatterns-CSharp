@@ -1,5 +1,5 @@
-﻿using DesignPatterns.Behavioural.Strategy;
-using DesignPatterns.Behavioural.Strategy.model;
+﻿using DesignPatterns.Behavioural.Iterator.interfaces;
+using DesignPatterns.Behavioural.Iterator.model;
 using DesignPatterns.Program;
 
 namespace Program
@@ -18,6 +18,8 @@ namespace Program
              - [x] Observer
              - [x] Memento
              - [x] Command
+             - [x] Strategy
+             - [x] Iterator
          Structural Patterns
              - [x] Facade
              - [x] Decorator
@@ -35,6 +37,17 @@ namespace Program
             Console.WriteLine(pattern);
 
 
+            NumbersCollection collection = new NumbersCollection(5, false);
+
+            collection.AddInt(1);
+            collection.AddInt(2);
+            collection.AddInt(3);
+            collection.AddInt(4);
+            collection.AddInt(5);
+
+            MyIterator iterator = collection.GetIterator();
+
+            collection.MyFor(iterator);
         }
     }
 }

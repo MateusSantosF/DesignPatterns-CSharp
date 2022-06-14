@@ -8,7 +8,6 @@
         /// <para/> - colocar operações em fila, agendar sua execução, ou executá-las remotamente.
         /// <para/> - implementar operações reversíveis.
         /// </summary>
-        /// <returns></returns>
         string Command();
 
         /// <summary>
