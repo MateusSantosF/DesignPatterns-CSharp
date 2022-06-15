@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Behavioural.Iterator.interfaces;
+﻿using DesignPatterns.Behavioural.chainOfResponsability.model;
+using DesignPatterns.Behavioural.Iterator.interfaces;
 using DesignPatterns.Behavioural.Iterator.model;
 using DesignPatterns.Behavioural.Mediator;
 using DesignPatterns.Behavioural.Mediator.model;
@@ -39,12 +40,10 @@ namespace Program
         {
             string pattern = DesignPattern.ChoosePattern()
                                           .BehavioralPatterns()
-                                          .Visitor();
+                                          .ChainOfResponsability();
             Console.WriteLine(pattern);
 
-          
 
-     
 
 
         }

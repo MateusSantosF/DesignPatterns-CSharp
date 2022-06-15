@@ -24,6 +24,7 @@
         public const string VISITOR = "Visitor";
         public const string MEDIATOR = "Mediator";
         public const string ITERATOR = "Iterator";
+        public const string COR = "ChainOfResponsability";
 
 
     }

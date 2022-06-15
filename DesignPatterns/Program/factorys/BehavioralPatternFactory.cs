@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Behavioural.CommandPattern;
+﻿using DesignPatterns.Behavioural.chainOfResponsability.model;
+using DesignPatterns.Behavioural.CommandPattern;
 using DesignPatterns.Behavioural.CommandPattern.model;
 using DesignPatterns.Behavioural.Iterator.interfaces;
 using DesignPatterns.Behavioural.Iterator.model;
@@ -117,6 +118,19 @@ namespace DesignPatterns.Program.factorys
 
                     return string.Empty;
 
+                case Constants.COR:
+                    Dialog dialog = new Dialog();
+                    Panel panel = new Panel();
+                    panel.SetToolText("Panel tool tip");
+
+                    var cancelButton = new BtnCancel();
+
+                    dialog.Add(cancelButton);
+                    panel.Add(dialog);
+
+                    cancelButton.ShowHelp();
+
+                    return string.Empty;
                 default:
                     return string.Empty;
 

@@ -48,5 +48,7 @@
         ///  segurança)
         /// </summary>
         string Iterator();
+
+        string ChainOfResponsability();
     }
 }

@@ -128,5 +128,10 @@ namespace DesignPatterns.Program
         {
             return _patterns["Behavioral"].Show(Constants.VISITOR);
         }
+
+        public string ChainOfResponsability()
+        {
+            return _patterns["Behavioral"].Show(Constants.COR);
+        }
     }
 }
