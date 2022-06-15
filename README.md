@@ -14,6 +14,8 @@
 - [x] Strategy <br>
 - [x] Visitor <br>
 - [x] Iterator <br>
+- [x] Mediator <br>
+- [x] Chain of Responsability <br>
 
 <h3> Structural </h3>
 - [x] Facade <br>
