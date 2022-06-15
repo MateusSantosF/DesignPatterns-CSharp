@@ -25,6 +25,7 @@ namespace Program
              - [x] Strategy
              - [x] Iterator
              - [x] Visitor
+             - [x] Mediator
          Structural Patterns
              - [x] Facade
              - [x] Decorator
@@ -41,33 +42,9 @@ namespace Program
                                           .Strategy();
             Console.WriteLine(pattern);
 
-            NumbersCollection collection = new NumbersCollection(5, false);
-            collection.AddInt(1);
-            collection.AddInt(2);
-            collection.AddInt(3);
-            collection.AddInt(4);
-            collection.AddInt(5);
+          
 
-            MyIterator iterator = collection.GetIterator();
-
-            collection.MyFor(iterator);
-
-            Dot dot = new Dot(2, 2);
-            Square square = new Square(3, 3);
-            ConcreteVisitor v = new ConcreteVisitor();
-            square.Accept(v);
-
-
-            SimpleDialog simpleDialog = new SimpleDialog(); //mediator
-
-            Button btn = new Button(simpleDialog);
-            Checkbox checkbox = new Checkbox(simpleDialog);
-
-            simpleDialog.RegisterComponent(btn);
-            simpleDialog.RegisterComponent(checkbox);
-
-            btn.Click();
-            checkbox.Click();
+     
 
 
         }

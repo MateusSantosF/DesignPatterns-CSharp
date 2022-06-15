@@ -21,6 +21,9 @@
         public const string MEMENTO = "Memento";
         public const string OBSERVER = "Observer";
         public const string STRATEGY = "Strategy";
+        public const string VISITOR = "Visitor";
+        public const string MEDIATOR = "Mediator";
+        public const string ITERATOR = "Iterator";
 
 
     }

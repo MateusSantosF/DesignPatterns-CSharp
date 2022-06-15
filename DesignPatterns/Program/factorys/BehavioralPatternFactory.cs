@@ -1,9 +1,15 @@
 ﻿using DesignPatterns.Behavioural.CommandPattern;
 using DesignPatterns.Behavioural.CommandPattern.model;
+using DesignPatterns.Behavioural.Iterator.interfaces;
+using DesignPatterns.Behavioural.Iterator.model;
+using DesignPatterns.Behavioural.Mediator;
+using DesignPatterns.Behavioural.Mediator.model;
 using DesignPatterns.Behavioural.Memento;
 using DesignPatterns.Behavioural.Observer.model;
 using DesignPatterns.Behavioural.Strategy;
 using DesignPatterns.Behavioural.Strategy.model;
+using DesignPatterns.Behavioural.Visitor;
+using DesignPatterns.Behavioural.Visitor.model;
 using DesignPatterns.Program.factorys.interfaces;
 
 
@@ -71,6 +77,42 @@ namespace DesignPatterns.Program.factorys
                     context.SetStrategy(new SumStrategy());
                     context.SetStrategy(new SubtractStrategy());
                     context.DoSomething(2, 2);
+
+                    return string.Empty;
+                case Constants.VISITOR:
+
+
+                    Dot dot = new Dot(2, 2);
+                    Square square = new Square(3, 3);
+                    ConcreteVisitor v = new ConcreteVisitor();
+                    square.Accept(v);
+
+                    return string.Empty;
+
+                case Constants.MEDIATOR:
+                    SimpleDialog simpleDialog = new SimpleDialog(); //mediator
+
+                    var btn = new Behavioural.Mediator.model.Button(simpleDialog);
+                    Checkbox checkbox = new Checkbox(simpleDialog);
+
+                    simpleDialog.RegisterComponent(btn);
+                    simpleDialog.RegisterComponent(checkbox);
+
+                    btn.Click();
+                    checkbox.Click();
+
+                    return string.Empty;
+
+                case Constants.ITERATOR:
+                    NumbersCollection collection = new NumbersCollection(5, false);
+                    collection.AddInt(1);
+                    collection.AddInt(2);
+                    collection.AddInt(3);
+                    collection.AddInt(4);
+                    collection.AddInt(5);
+
+                    MyIterator iterator = collection.GetIterator();
+                    collection.MyFor(iterator);
 
                     return string.Empty;
 

@@ -113,5 +113,20 @@ namespace DesignPatterns.Program
         {
             return _patterns["Behavioral"].Show(Constants.STRATEGY);
         }
+
+        public string Mediator()
+        {
+            return _patterns["Behavioral"].Show(Constants.MEDIATOR);
+        }
+
+        public string Iterator()
+        {
+            return _patterns["Behavioral"].Show(Constants.ITERATOR);
+        }
+
+        public string Visitor()
+        {
+            return _patterns["Behavioral"].Show(Constants.VISITOR);
+        }
     }
 }

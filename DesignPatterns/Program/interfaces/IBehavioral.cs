@@ -27,5 +27,11 @@
         /// e ser capaz de trocar de um algoritmo para outro durante a execução.
         /// </summary>
         string Strategy();
+
+        string Mediator();
+
+        string Visitor();
+
+        string Iterator();
     }
 }
