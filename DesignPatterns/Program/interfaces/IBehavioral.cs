@@ -49,6 +49,12 @@
         /// </summary>
         string Iterator();
 
+
+        /// <summary>
+        ///  Utilize o padrão quando é essencial executar diversos handlers em uma ordem específica.<para/>
+        ///  O padrão permite que você ligue vários handlers em uma corrente e, ao receber um pedido, perguntar 
+        ///  para cada handler se ele pode ou não processá-lo. Dessa forma todos os handlers tem a chance de processar o pedido.
+        /// </summary>
         string ChainOfResponsability();
     }
 }

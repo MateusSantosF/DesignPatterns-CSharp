@@ -1,11 +1,4 @@
-﻿using DesignPatterns.Behavioural.chainOfResponsability.model;
-using DesignPatterns.Behavioural.Iterator.interfaces;
-using DesignPatterns.Behavioural.Iterator.model;
-using DesignPatterns.Behavioural.Mediator;
-using DesignPatterns.Behavioural.Mediator.model;
-using DesignPatterns.Behavioural.Visitor;
-using DesignPatterns.Behavioural.Visitor.model;
-using DesignPatterns.Program;
+﻿using DesignPatterns.Program;
 
 namespace Program
 {
@@ -42,10 +35,6 @@ namespace Program
                                           .BehavioralPatterns()
                                           .ChainOfResponsability();
             Console.WriteLine(pattern);
-
-
-
-
         }
     }
 }
