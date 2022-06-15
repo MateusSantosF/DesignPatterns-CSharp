@@ -1,5 +1,7 @@
 ﻿using DesignPatterns.Behavioural.Iterator.interfaces;
 using DesignPatterns.Behavioural.Iterator.model;
+using DesignPatterns.Behavioural.Mediator;
+using DesignPatterns.Behavioural.Mediator.model;
 using DesignPatterns.Behavioural.Visitor;
 using DesignPatterns.Behavioural.Visitor.model;
 using DesignPatterns.Program;
@@ -22,6 +24,7 @@ namespace Program
              - [x] Command
              - [x] Strategy
              - [x] Iterator
+             - [x] Visitor
          Structural Patterns
              - [x] Facade
              - [x] Decorator
@@ -38,9 +41,7 @@ namespace Program
                                           .Strategy();
             Console.WriteLine(pattern);
 
-
             NumbersCollection collection = new NumbersCollection(5, false);
-
             collection.AddInt(1);
             collection.AddInt(2);
             collection.AddInt(3);
@@ -55,6 +56,20 @@ namespace Program
             Square square = new Square(3, 3);
             ConcreteVisitor v = new ConcreteVisitor();
             square.Accept(v);
+
+
+            SimpleDialog simpleDialog = new SimpleDialog(); //mediator
+
+            Button btn = new Button(simpleDialog);
+            Checkbox checkbox = new Checkbox(simpleDialog);
+
+            simpleDialog.RegisterComponent(btn);
+            simpleDialog.RegisterComponent(checkbox);
+
+            btn.Click();
+            checkbox.Click();
+
+
         }
     }
 }
