@@ -39,7 +39,7 @@ namespace Program
         {
             string pattern = DesignPattern.ChoosePattern()
                                           .BehavioralPatterns()
-                                          .Strategy();
+                                          .Visitor();
             Console.WriteLine(pattern);
 
           

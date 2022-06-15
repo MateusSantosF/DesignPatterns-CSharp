@@ -23,8 +23,9 @@ namespace DesignPatterns.Program.factorys
             {
                 case Constants.COMMAND:
                     Editor editor = new Editor();
-                    Button copyButton = new Button(new CopyCommand(editor));
-                    Button pasteButton = new Button(new PasteCommand(editor));
+
+                    var copyButton = new Behavioural.CommandPattern.model.Button(new CopyCommand(editor));
+                    var pasteButton = new Behavioural.CommandPattern.model.Button(new PasteCommand(editor));
 
                     editor.CurrentText = "Hello";
                     editor.SelectedText = "World!";
